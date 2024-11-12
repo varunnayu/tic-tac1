@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XOXO Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>XOXO Game</h1>
+        
+        <!-- Scoreboard -->
+        <div class="scoreboard">
+            <div class="score" id="playerXScore">X: 0</div>
+            <div class="score" id="playerOScore">O: 0</div>
+        </div>
+        
+        <!-- Game Board -->
+        <div class="board">
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+        </div>
+        
+        <!-- Winner Popup -->
+        <div class="winner-popup" id="winnerPopup">
+            <div class="winner-message" id="winnerMessage">Player X Wins!</div>
+            <button id="restartButton">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

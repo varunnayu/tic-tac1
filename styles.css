@@ -1,0 +1,111 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #f0f2f5;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Scoreboard Styling */
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.score {
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #eee;
+    min-width: 60px;
+}
+
+/* Game Board Styling */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    margin: 0 auto;
+    width: max-content;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+    background-color: #f2f2f2;
+}
+
+/* Winner Popup Styling */
+.winner-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: none;
+    text-align: center;
+    animation: popup 0.3s ease;
+}
+
+.winner-popup.show {
+    display: block;
+}
+
+.winner-message {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#restartButton {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#restartButton:hover {
+    background-color: #45a049;
+}
+
+@keyframes popup {
+    from { opacity: 0; transform: translate(-50%, -50%) scale(0.7); }
+    to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
